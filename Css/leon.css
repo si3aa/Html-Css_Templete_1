@@ -6,43 +6,92 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 body {
     font-family: "Work Sans", sans-serif;
 }
+
 .container {
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
 }
+
 /* Small */
 @media (min-width: 768px) {
     .container {
         width: 750px;
     }
 }
+
 /* Medium */
 @media (min-width: 992px) {
     .container {
         width: 970px;
     }
 }
+
 /* Large */
 @media (min-width: 1200px) {
     .container {
         width: 1170px;
     }
 }
+
 /*End Global Rules*/
-/*
-echo "# Html-Css_Templete_1" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/si3aa/Html-Css_Templete_1.git
-git push -u origin main
-*/
+/*Start Header*/
+.header {
+    padding: 20px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header .logo {
+    width: 60px;
+}
+
+.header .links {
+    position: relative;
+}
+
+.header .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+
+.header .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.header .links .icon span {
+    background-color: #333;
+    margin-bottom: 5px;
+    height: 2px;
+}
+
+.header .links .icon span:first-child {
+    width: 100%;
+}
+
+.header .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: 0.3s;
+}
+
+.header .links .icon span:last-child {
+    width: 100%;
+}
+
+/*End Header*/
