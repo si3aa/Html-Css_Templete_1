@@ -2,6 +2,7 @@
 :root {
     --main-color: #10cab7;
     --secondary-color: #2c4755;
+    --text-color: #797979;
     --section-padding: 60px;
     --section-background: #f6f6f6;
 }
@@ -22,7 +23,7 @@
     margin: -30px 0 0;
     font-size: 20px;
     text-align: center;
-    color: #797979;
+    color: var(--text-color);
 }
 
 @media(max-width:767px) {
@@ -212,8 +213,8 @@ body {
 
 /* Start Features */
 .features {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
     background-color: var(--section-background);
 }
 
@@ -241,7 +242,7 @@ body {
 
 .features .feat p {
     line-height: 1.8;
-    color: #777;
+    color: var(--text-color);
     font-size: 17p;
 }
 
@@ -249,8 +250,8 @@ body {
 
 /* Start Services */
 .services {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
 }
 
 .services .services-content {
@@ -264,34 +265,40 @@ body {
     display: flex;
     margin-bottom: 40px;
 }
+
 @media (max-width: 767px) {
     .services .services-content .srv {
-      flex-direction: column;
-      text-align: center;
+        flex-direction: column;
+        text-align: center;
     }
-  }
-.services .services-content .srv i{
+}
+
+.services .services-content .srv i {
     color: var(--main-color);
     flex-basis: 60px;
 }
-.services .services-content .srv .text{
-   flex: 1;
-  
+
+.services .services-content .srv .text {
+    flex: 1;
+
 }
 
 .services .services-content .srv .text h3 {
-    margin: 0 0 20px; 
+    margin: 0 0 20px;
 }
-.services .services-content .srv .text p{
+
+.services .services-content .srv .text p {
     color: #444;
     font-weight: 300;
     line-height: 1.6;
 }
+
 .services .services-content .image {
     text-align: center;
     position: relative;
-  }
-  .services .services-content .image::before {
+}
+
+.services .services-content .image::before {
     content: "";
     background-color: var(--secondary-color);
     width: 100px;
@@ -300,11 +307,58 @@ body {
     position: absolute;
     right: 0;
     z-index: -1;
-  }
-  
-  @media (max-width: 1199px) {
+}
+
+@media (max-width: 1199px) {
     .image-column {
-      display: none;
+        display: none;
     }
-  }
+}
+
 /* End Services */
+/* Start Portfolio */
+.portfolio {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--section-background);
+}
+
+.portfolio .portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 30px;
+    margin-top: 80px;
+}
+
+.portfolio .portfolio-content .card {
+    background-color: white;
+}
+
+.portfolio .portfolio-content .card img {
+    max-width: 100%;
+}
+
+.portfolio .portfolio-content .card .info {
+    padding: 20px;
+
+}
+
+.portfolio .portfolio-content .card .info h3 {
+    margin: 0;
+
+}
+
+.portfolio .portfolio-content .card .info p {
+   color: var(--text-color);
+   line-height: 1.6;
+   margin-bottom: 0;
+
+}
+@media (max-width: 767px) {
+    .portfolio .portfolio-content .card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* End Portfolio */
