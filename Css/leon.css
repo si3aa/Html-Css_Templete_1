@@ -5,6 +5,7 @@
     --text-color: #797979;
     --section-padding: 60px;
     --section-background: #f6f6f6;
+    --main-duration: 0.3s;
 }
 
 /*End Variables*/
@@ -124,7 +125,7 @@ body {
 
 .header .links .icon span:nth-child(2) {
     width: 60%;
-    transition: 0.3s;
+    transition: var(--main-duration);
 }
 
 .header .links .icon span:last-child {
@@ -164,7 +165,7 @@ body {
     padding: 15px;
     text-decoration: none;
     color: #333;
-    transition: 0.3s
+    transition: var(--main-duration);
 }
 
 .header .links ul li a:hover {
@@ -499,7 +500,7 @@ body {
 
     .contact .info .label,
     .contact .info .link {
-        font-size: 25px;
+        font-size: 20px;
         color: var(--main-color);
     }
 }
@@ -516,5 +517,13 @@ body {
 .footer span{
     font-weight: bold;
     color: var(--main-color);
+}
+@media(max-width: 767px) {
+
+    .footer{
+        font-size: 20px;
+        flex-direction: column;
+        text-align: center;
+    }
 }
 /* End Footer */
